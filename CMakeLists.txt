@@ -553,9 +553,12 @@ file(COPY ${LIB_MAIN_HEADERS} DESTINATION "${PROJECT_BINARY_DIR}/include")
 file(COPY ${LIB_UTIL_HEADERS} DESTINATION "${PROJECT_BINARY_DIR}/include/sysrepo")
 
 # installation
+message(STATUS "MARTIN-DEBUG I am here)
 file(GLOB yangs "${PROJECT_SOURCE_DIR}/modules/*.yang")
+message(STATUS "MARTIN-DEBUG yangs: ${yangs}")
 install(FILES ${yangs} DESTINATION ${YANG_MODULE_DIR})
 file(GLOB sn_yangs "${PROJECT_SOURCE_DIR}/modules/subscribed_notifications/*.yang")
+message(STATUS "MARTIN-DEBUG sn_yangs: ${sn_yangs}")
 install(FILES ${sn_yangs} DESTINATION ${YANG_MODULE_DIR})
 
 install(TARGETS sysrepo DESTINATION ${CMAKE_INSTALL_LIBDIR})
