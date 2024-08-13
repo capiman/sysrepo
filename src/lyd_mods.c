@@ -63,6 +63,10 @@
 #include "../modules/ietf_netconf_notifications_yang.h"
 #include "../modules/ietf_netconf_with_defaults_yang.h"
 #include "../modules/ietf_netconf_yang.h"
+
+// File for RESTCONF (rousette)
+#include "../modules/ietf_restconf_yang.h"
+
 #include "../modules/ietf_origin_yang.h"
 #include "../modules/sysrepo_monitoring_yang.h"
 #include "../modules/sysrepo_plugind_yang.h"
@@ -1003,6 +1007,9 @@ sr_lydmods_create(sr_conn_ctx_t *conn, struct ly_ctx *ly_ctx, struct lyd_node **
 
     /* install ietf-netconf-notifications */
     SR_INSTALL_INT_MOD(ly_ctx, ietf_netconf_notifications_yang, 0, new_mods, new_mod_count);
+
+    /* install ietf-restconf */
+    SR_INSTALL_INT_MOD(ly_ctx, ietf_restconf_yang, 0, new_mods, new_mod_count);
 
     /* install ietf-origin */
     SR_INSTALL_INT_MOD(ly_ctx, ietf_origin_yang, 0, new_mods, new_mod_count);
