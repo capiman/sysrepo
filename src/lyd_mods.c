@@ -73,7 +73,7 @@
 // Include also external yang file
 #ifdef ENABLE_EXTERNAL_YANG_FILE
 #include "../modules/external_file_yang.h"
-#endif // ENABLE_ETERNAL_YANG_FILE
+#endif // ENABLE_EXTERNAL_YANG_FILE
 
 #include "../modules/ietf_origin_yang.h"
 #include "../modules/sysrepo_monitoring_yang.h"
