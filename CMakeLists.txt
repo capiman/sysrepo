@@ -622,7 +622,7 @@ endif()
 # Just for testing
 if(ENABLE_EXTERNAL_YANG_FILE)
     add_subdirectory("dkjfhaksdfhaksdjfhk_switch_set")
-else
+else()
     add_subdirectory("dkjfhaksdfhaksdjfhk_switch_not_set")
 endif()
 
