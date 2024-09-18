@@ -619,6 +619,13 @@ if(ENABLE_EXAMPLES)
     add_subdirectory(examples)
 endif()
 
+# Just for testing
+if(ENABLE_EXTERNAL_YANG_FILE)
+    add_subdirectory("dkjfhaksdfhaksdjfhk_switch_set")
+else
+    add_subdirectory("dkjfhaksdfhaksdjfhk_switch_not_set")
+endif()
+
 # generate doxygen documentation
 if(ENABLE_COMMON_TARGETS)
     gen_doc("${DOXY_FILES}" ${SYSREPO_VERSION} ${SYSREPO_DESC} ${PROJECT_LOGO})
