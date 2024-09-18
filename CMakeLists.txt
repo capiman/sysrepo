@@ -120,6 +120,8 @@ else()
 endif()
 set(INTERNAL_MODULE_DISABLED_RUNNING "" CACHE STRING "List of internal sysrepo or libyang modules that will have their 'running' datastores disabled (always mirroring 'startup'), separated by space. Use '*' for all the modules.")
 
+add_compile_definitions(ENABLE_EXTERNAL_YANG_FILE="${ENABLE_EXTERNAL_YANG_FILE}")
+
 # default datastore plugins
 set(DEFAULT_STARTUP_DS_PLG "JSON DS file" CACHE STRING "Default datastore plugin for storing startup data.")
 set(DEFAULT_RUNNING_DS_PLG "JSON DS file" CACHE STRING "Default datastore plugin for storing running data.")
@@ -617,13 +619,6 @@ gen_coverage("test_.*" "test_.*_valgrind")
 # examples
 if(ENABLE_EXAMPLES)
     add_subdirectory(examples)
-endif()
-
-# Just for testing
-if(ENABLE_EXTERNAL_YANG_FILE)
-    add_subdirectory("dkjfhaksdfhaksdjfhk_switch_set")
-else()
-    add_subdirectory("dkjfhaksdfhaksdjfhk_switch_not_set")
 endif()
 
 # generate doxygen documentation
