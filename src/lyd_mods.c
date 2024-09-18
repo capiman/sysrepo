@@ -1025,8 +1025,6 @@ sr_lydmods_create(sr_conn_ctx_t *conn, struct ly_ctx *ly_ctx, struct lyd_node **
 #ifdef ENABLE_EXTERNAL_YANG_FILE
     /* Also install external yang file */
     SR_INSTALL_INT_MOD(ly_ctx, external_file_yang, 0, new_mods, new_mod_count);
-#else
-    kjdfahlksdfhaklsdfhaskldjfhaskldjfhaklsjdf
 #endif // ENABLE_EXTERNAL_YANG_FILE
 
     /* install ietf-origin */
