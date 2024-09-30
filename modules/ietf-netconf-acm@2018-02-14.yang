@@ -237,7 +237,7 @@ module ietf-netconf-acm {
 
     leaf write-default {
       type action-type;
-      default "deny";
+      default "permit";
       description
         "Controls whether create, update, or delete access
          is granted if no appropriate rule is found for a
